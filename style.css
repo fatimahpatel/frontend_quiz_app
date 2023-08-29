@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+/* the asterix is a universal selector */
+/* set to border box so if we add any padding or border onto element, it won't impact the width of it */
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    /* display flex centres everything */
+    /* if flexbox is a column, align items will align horizontally */
+    /* if flexbox is a row, align items will align vertically */
+    /* vh is viewport height aka entire height of browser */
+}
