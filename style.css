@@ -7,6 +7,8 @@
 /* set to border box so if we add any padding or border onto element, it won't impact the width of it */
 
 body{
+    background-color: #ffaaba;
+    background-image: linear-gradient(315deg, #ffaaba 10%, #eedd88 100%);
     font-family: 'Poppins', 'sans-serif';
     display: flex;
     flex-direction: column;
