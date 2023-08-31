@@ -53,3 +53,15 @@ ul li{
 ul li label{ 
     cursor: pointer;
 }
+
+button {
+    background-color: #bbcc33;
+    color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: inherit;
+    padding: 1.3rem; 
+}
