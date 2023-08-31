@@ -33,3 +33,13 @@ body{
 .quiz-header {
     padding: 4rem;
 }
+
+h2{
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+}
