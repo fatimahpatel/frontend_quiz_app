@@ -65,3 +65,12 @@ button {
     font-family: inherit;
     padding: 1.3rem; 
 }
+
+button:hover{
+    background-color: #aaaa00;
+}
+
+button:focus{
+    outline: none;
+    background-color: #bbcc33;
+}
