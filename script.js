@@ -24,4 +24,8 @@ const quizData = [
         correct: "d",
     
     }    
-]
+];
+
+const quiz = document.getElementById('quiz');
+const answerElements = document.querySelectorAll('.answer');
+const questionElement = document.getElementById('question');
