@@ -37,3 +37,9 @@ const submitButton = document.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
+
+loadquiz();
+
+function loadquiz(){
+    const currentQuizData = quizData[currentQuiz]
+}
