@@ -41,5 +41,6 @@ let score = 0;
 loadquiz();
 
 function loadquiz(){
-    const currentQuizData = quizData[currentQuiz]
+    const currentQuizData = quizData[currentQuiz];
+    questionElement.innerText = currentQuizData.question;
 }
