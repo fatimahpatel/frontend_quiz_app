@@ -41,10 +41,19 @@ let score = 0;
 loadquiz();
 
 function loadquiz(){
+    deselectAnswers()
+
     const currentQuizData = quizData[currentQuiz];
+
     questionElement.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
     c_text.innerText = currentQuizData.c;
     d_text.innerText = currentQuizData.d;
+}
+
+// This function deselects the answers when the next question appears
+// .checked picks up answer that has been picked
+function deselectAnswers() {
+    answerElements.forEach(answerElement => answerElement.checked = false)
 }
