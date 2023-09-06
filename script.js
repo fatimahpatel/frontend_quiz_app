@@ -57,3 +57,13 @@ function loadquiz(){
 function deselectAnswers() {
     answerElements.forEach(answerElement => answerElement.checked = false)
 }
+
+//attempt by myself before watching tutorial
+//need to loop through each answer return the one that is selected
+//then we need to match that with the correct answer
+//
+
+
+submitButton.addEventListener('click', () =>{
+})
+
