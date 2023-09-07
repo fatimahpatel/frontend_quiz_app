@@ -67,8 +67,7 @@ function deselectAnswers() {
 submitButton.addEventListener('click', () =>{
     
     answerElements.forEach((answerElement) => {
-        console.log(answerElement)
+        if (answerElement.checked){
+        console.log(answerElement)}
     })}
-       
-
 )
