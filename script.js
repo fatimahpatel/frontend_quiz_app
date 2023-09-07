@@ -37,8 +37,6 @@ const submitButton = document.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
-const currentQuizData = quizData[currentQuiz];
-
 
 
 loadquiz();
@@ -46,6 +44,7 @@ loadquiz();
 function loadquiz(){
     deselectAnswers()
 
+    const currentQuizData = quizData[currentQuiz];
     
     questionElement.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
@@ -53,6 +52,7 @@ function loadquiz(){
     c_text.innerText = currentQuizData.c;
     d_text.innerText = currentQuizData.d;
 
+    return currentQuizData;
 
 }
 
@@ -67,7 +67,7 @@ function deselectAnswers() {
 //then we need to match that with the correct answer
 //
 
-function correctAnswer(answerElement){
+function correctAnswer(answerElement, currentQuizData){
     if (answerElement.id == currentQuizData.correct){
         console.log("correct")
     }
