@@ -65,10 +65,10 @@ function deselectAnswers() {
 
 
 submitButton.addEventListener('click', () =>{
+    
     answerElements.forEach((answerElement) => {
-        if (answerElement.checked){
-            return answerElement
-        } console.log(answerElement)})
+        console.log(answerElement)
+    })}
+       
 
-})
-
+)
