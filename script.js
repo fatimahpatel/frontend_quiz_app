@@ -67,17 +67,21 @@ function deselectAnswers() {
 //then we need to match that with the correct answer
 //
 
+function correctAnswer(answerElement){
+    if (answerElement.id == currentQuizData.correct){
+        console.log("correct")
+    }
+    else{
+        console.log("incorrect")
+    }
+}
+
 
 submitButton.addEventListener('click', () =>{
     
     answerElements.forEach((answerElement) => {
         if (answerElement.checked){
-            if (answerElement.id == currentQuizData.correct){
-                console.log("correct")
-            }
-            else{
-                console.log("incorrect")
-            }
+            correctAnswer(answerElement)
         }
     })}
 )
