@@ -37,19 +37,23 @@ const submitButton = document.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
+const currentQuizData = quizData[currentQuiz];
+
+
 
 loadquiz();
 
 function loadquiz(){
     deselectAnswers()
 
-    const currentQuizData = quizData[currentQuiz];
-
+    
     questionElement.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
     c_text.innerText = currentQuizData.c;
     d_text.innerText = currentQuizData.d;
+
+
 }
 
 // This function deselects the answers when the next question appears
@@ -68,6 +72,12 @@ submitButton.addEventListener('click', () =>{
     
     answerElements.forEach((answerElement) => {
         if (answerElement.checked){
-        console.log(answerElement)}
+            if (answerElement.id == currentQuizData.correct){
+                console.log("correct")
+            }
+            else{
+                console.log("incorrect")
+            }
+        }
     })}
 )
