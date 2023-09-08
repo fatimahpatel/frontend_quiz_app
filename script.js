@@ -69,6 +69,7 @@ function deselectAnswers() {
 
 function correctAnswer(answerElement, currentQuizData){
     if (answerElement.id == currentQuizData.correct){
+        score++;
         console.log("correct")
     }
     else{
