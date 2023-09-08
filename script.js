@@ -68,9 +68,10 @@ function deselectAnswers() {
 //
 
 function correctAnswer(answerElement, currentQuizData){
-    if (answerElement.id == currentQuizData.correct){
-        score++;
-        console.log("correct")
+    if (answerElement.id === currentQuizData.correct){
+        // score++;
+        console.log("correct");
+        // console.log(score);
     }
     else{
         console.log("incorrect")
@@ -78,11 +79,11 @@ function correctAnswer(answerElement, currentQuizData){
 }
 
 
-submitButton.addEventListener('click', () =>{
+submitButton.addEventListener('click', (currentQuizData) =>{
     
     answerElements.forEach((answerElement) => {
         if (answerElement.checked){
-            correctAnswer(answerElement)
+            correctAnswer(answerElement, currentQuizData)
         }
     })}
 )
