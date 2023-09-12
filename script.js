@@ -64,19 +64,17 @@ function deselectAnswers() {
 //need to loop through each answer return the one that is selected
 //then we need to match that with the correct answer
 
-// function correctAnswer(answerElement, currentQuizData){
-//     console.log(currentQuizData.correct)
-//     if (answerElement.id == currentQuizData.correct){
-//         // score++;
-//         console.log("correct");
-//         // console.log(score);
-//     }
-//     else{
-//         console.log("incorrect")
-//         console.log(answerElement.id)
-//         console.log(currentQuizData.correct)
-//     }
-// }
+function correctAnswer(answerElement){
+    if (answerElement.id == quizData[currentQuiz].correct){
+        // score++;
+        console.log("correct");
+        // console.log(score);
+    }
+    else{
+        console.log("incorrect")
+        console.log(answerElement.id)
+    }
+}
 
 //when button is clicked DONE
 //loop through each answer
@@ -87,8 +85,7 @@ submitButton.addEventListener('click', () =>{
     
     answerElements.forEach((answerElement) => {
         if (answerElement.checked){
-            console.log(answerElement)
-            console.log(quizData[currentQuiz].correct)
+            correctAnswer()
         }
     })}
 )
