@@ -37,12 +37,9 @@ const submitButton = document.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
-const currentQuizData = quizData[currentQuiz];
 
-
-loadquiz(currentQuizData);
-
-function loadquiz(currentQuizData){
+function loadQuizQuestion(){
+    const currentQuizData = quizData[currentQuiz]
     deselectAnswers()
 
     questionElement.innerText = currentQuizData.question;
@@ -63,19 +60,19 @@ function deselectAnswers() {
 //attempt by myself before watching tutorial
 //need to loop through each answer return the one that is selected
 //then we need to match that with the correct answer
-//
 
 function correctAnswer(answerElement, currentQuizData){
-    if (answerElement.id == currentQuizData.correct){
-        // score++;
-        console.log("correct");
-        // console.log(score);
-    }
-    else{
-        console.log("incorrect")
-        console.log(answerElement.id)
-        console.log(currentQuizData.correct)
-    }
+    console.log(currentQuizData.correct)
+    // if (answerElement.id == currentQuizData.correct){
+    //     // score++;
+    //     console.log("correct");
+    //     // console.log(score);
+    // }
+    // else{
+    //     console.log("incorrect")
+    //     console.log(answerElement.id)
+    //     console.log(currentQuizData.correct)
+    // }
 }
 
 
@@ -87,3 +84,5 @@ submitButton.addEventListener('click', () =>{
         }
     })}
 )
+
+loadQuizQuestion();
