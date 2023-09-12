@@ -39,6 +39,7 @@ let currentQuiz = 0;
 let score = 0;
 
 
+
 //deselect checked answers and assigns inner text to each option of currentQuizData object
 function loadQuizQuestion(){
     const currentQuizData = quizData[currentQuiz]
@@ -86,7 +87,8 @@ submitButton.addEventListener('click', () =>{
     
     answerElements.forEach((answerElement) => {
         if (answerElement.checked){
-            console.log(answerElement.innerText)
+            console.log(answerElement)
+            console.log(quizData[currentQuiz].correct)
         }
     })}
 )
