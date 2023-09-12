@@ -65,17 +65,15 @@ function deselectAnswers() {
 //then we need to match that with the correct answer
 
 function correctAnswer(answerElement){
-    console.log(answerElement)
-    console.log(quizData[currentQuiz].correct)
-    // if (answerElement.id == quizData[currentQuiz].correct){
-    //     // score++;
-    //     console.log("correct");
-    //     // console.log(score);
-    // }
-    // else{
-    //     console.log("incorrect")
-    //     console.log(answerElement.id)
-    // }
+    if (answerElement.id == quizData[currentQuiz].correct){
+        // score++;
+        console.log("correct");
+        // console.log(score);
+    }
+    else{
+        console.log("incorrect")
+        console.log(answerElement.id)
+    }
 }
 
 //when button is clicked DONE
