@@ -37,10 +37,12 @@ const submitButton = document.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
+const currentQuizData = quizData[currentQuiz]
 
-function loadQuizQuestion(){
-    const currentQuizData = quizData[currentQuiz]
-    deselectAnswers()
+//deselect checked answers and assigns inner text to each option of currentQuizData object
+function loadQuizQuestion(currentQuizData){
+    
+    deselectAnswers() // This function deselects the answers when the next question appears
 
     questionElement.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
@@ -48,41 +50,44 @@ function loadQuizQuestion(){
     c_text.innerText = currentQuizData.c;
     d_text.innerText = currentQuizData.d;
 
-
 }
 
-// This function deselects the answers when the next question appears
 // .checked picks up answer that has been picked
 function deselectAnswers() {
     answerElements.forEach(answerElement => answerElement.checked = false)
 }
 
-//attempt by myself before watching tutorial
+
+
 //need to loop through each answer return the one that is selected
 //then we need to match that with the correct answer
 
-function correctAnswer(answerElement, currentQuizData){
-    console.log(currentQuizData.correct)
-    // if (answerElement.id == currentQuizData.correct){
-    //     // score++;
-    //     console.log("correct");
-    //     // console.log(score);
-    // }
-    // else{
-    //     console.log("incorrect")
-    //     console.log(answerElement.id)
-    //     console.log(currentQuizData.correct)
-    // }
-}
+// function correctAnswer(answerElement, currentQuizData){
+//     console.log(currentQuizData.correct)
+//     if (answerElement.id == currentQuizData.correct){
+//         // score++;
+//         console.log("correct");
+//         // console.log(score);
+//     }
+//     else{
+//         console.log("incorrect")
+//         console.log(answerElement.id)
+//         console.log(currentQuizData.correct)
+//     }
+// }
 
-
+//when button is clicked DONE
+//loop through each answer
+//if answer is checked
+//you want to match this with answer of currentQuizData object
+//if the two match, gives user one point
 submitButton.addEventListener('click', () =>{
     
-    answerElements.forEach((answerElement, currentQuizData) => {
+    answerElements.forEach((answerElement) => {
         if (answerElement.checked){
             correctAnswer(answerElement, currentQuizData)
         }
     })}
 )
 
-loadQuizQuestion();
+loadQuizQuestion(currentQuizData);
