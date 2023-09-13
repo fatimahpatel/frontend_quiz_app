@@ -66,8 +66,6 @@ function deselectAnswers() {
 function correctAnswer(answerElement){
     if (answerElement.id == quizData[currentQuiz].correct){
         score++;
-        console.log("correct");
-        console.log(score);
     }
     else{
         console.log("incorrect")
@@ -85,6 +83,8 @@ submitButton.addEventListener('click', () =>{
     answerElements.forEach((answerElement) => {
         if (answerElement.checked){
             correctAnswer(answerElement)
+
+            currentQuiz++
         }
     })}
 )
