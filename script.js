@@ -60,15 +60,14 @@ function deselectAnswers() {
 }
 
 
-
 //need to loop through each answer return the one that is selected
 //then we need to match that with the correct answer
 
 function correctAnswer(answerElement){
     if (answerElement.id == quizData[currentQuiz].correct){
-        // score++;
+        score++;
         console.log("correct");
-        // console.log(score);
+        console.log(score);
     }
     else{
         console.log("incorrect")
