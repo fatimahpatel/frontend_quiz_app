@@ -64,6 +64,7 @@ function deselectAnswers() {
 //then we need to match that with the correct answer
 
 function correctAnswer(answerElement){
+    
     if (answerElement.id == quizData[currentQuiz].correct){
         score++;
     }
@@ -84,19 +85,20 @@ submitButton.addEventListener('click', () =>{
         if (answerElement.checked){
             correctAnswer(answerElement)
 
-            currentQuiz++
         }
 
-        // if(currentQuiz < quizData.length){
-        //     loadQuizQuestion()
-        // }
-        // else{
-        //     quiz.innerHTML = `
-        //         <h2> You scored ${score}/${quizData.length}</h2>
+        currentQuiz++
 
-        //         <button onclick = location.reload()">Reload</button>`
+        if(currentQuiz < quizData.length){
+            loadQuizQuestion()
+        }
+        else{
+            quiz.innerHTML = `
+                <h2> You scored ${score}/${quizData.length}</h2>
+
+                <button onclick = location.reload()>Reload</button>`
             
-        // }
+        }
     })}
 )
 
