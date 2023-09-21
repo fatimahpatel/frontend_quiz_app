@@ -64,13 +64,14 @@ function deselectAnswers() {
 //then we need to match that with the correct answer
 
 function correctAnswer(answerElement){
-    
+    console.log(currentQuiz)
     if (answerElement.id == quizData[currentQuiz].correct){
         score++;
     }
     else{
         console.log("incorrect")
         console.log(answerElement.id)
+        console.log(quizData[currentQuiz].correct)
     }
 }
 
@@ -84,10 +85,9 @@ submitButton.addEventListener('click', () =>{
     answerElements.forEach((answerElement) => {
         if (answerElement.checked){
             correctAnswer(answerElement)
+            currentQuiz++
 
         }
-
-        currentQuiz++
 
         if(currentQuiz < quizData.length){
             loadQuizQuestion()
