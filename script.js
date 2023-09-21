@@ -67,11 +67,10 @@ function correctAnswer(answerElement){
     console.log(currentQuiz)
     if (answerElement.id == quizData[currentQuiz].correct){
         score++;
-    }
-    else{
-        console.log("incorrect")
-        console.log(answerElement.id)
+    } else{
         console.log(quizData[currentQuiz].correct)
+        console.log(answerElement.id)
+
     }
 }
 
@@ -86,20 +85,22 @@ submitButton.addEventListener('click', () =>{
         if (answerElement.checked){
             correctAnswer(answerElement)
             currentQuiz++
-
         }
 
-        if(currentQuiz < quizData.length){
-            loadQuizQuestion()
-        }
-        else{
-            quiz.innerHTML = `
-                <h2> You scored ${score}/${quizData.length}</h2>
+    
+    })
 
-                <button onclick = location.reload()>Reload</button>`
-            
-        }
-    })}
-)
+    if(currentQuiz < quizData.length){
+        loadQuizQuestion()
+    }
+    else{
+        quiz.innerHTML = `
+            <h2> You scored ${score}/${quizData.length}</h2>
+
+            <button onclick = location.reload()>Reload</button>`
+        
+    }
+
+})
 
 loadQuizQuestion()
